@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transcription Completed</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.15/css/uikit.min.css" />
+</head>
+<body>
+<div class="uk-container uk-margin-top">
+  <h1 class="uk-heading-line uk-text-center"><span>Transcription Completed</span></h1>
+  <p class="uk-text-center">Your transcription with updated speaker names is ready. Download the files below:</p>
+  <ul class="uk-list uk-list-divider">
+    <li><a href="{{ url_for('download', uid=uid, type='vtt') }}">Download WebVTT File</a></li>
+    <li><a href="{{ url_for('download', uid=uid, type='transcript') }}">Download Transcript File</a></li>
+  </ul>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.15/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.15/js/uikit-icons.min.js"></script>
+</body>
+</html>

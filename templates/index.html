@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Video Transcription</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.15/css/uikit.min.css"/>
+</head>
+<body>
+<div class="uk-container uk-margin-top">
+    <h1 class="uk-heading-line uk-text-center"><span>Video Transcription</span></h1>
+    {% if error %}
+    <div class="uk-alert-danger" uk-alert>
+        <p>{{ error }}</p>
+    </div>
+    {% endif %}
+    <form class="uk-form-stacked" id="video-upload-form" action="{{ url_for('index') }}" method="post"
+          enctype="multipart/form-data">
+        <fieldset class="uk-fieldset">
+            <legend class="uk-legend">Upload Video</legend>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="video">Select Video File</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="video" type="file" name="video" required>
+                </div>
+            </div>
+            <div class="uk-margin">
+                <button class="uk-button uk-button-primary" type="submit">Upload and Transcribe</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.15/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.15/js/uikit-icons.min.js"></script>
+
+</body>
+</html>
