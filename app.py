@@ -68,12 +68,17 @@ def index():
             return render_template("index.html", error=error)
 
         # STEP 3: Run speaker diarization.
+        HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_TOKEN")
+
+        if not HUGGINGFACE_TOKEN:
+            raise ValueError("Hugging Face token not found!")
+
         diarization = None
         try:
             from pyannote.audio import Pipeline
             diarization_pipeline = Pipeline.from_pretrained(
                 "pyannote/speaker-diarization",
-                use_auth_token=""  # Replace with your Hugging Face token.
+                use_auth_token=HUGGINGFACE_TOKEN
             )
             diarization = diarization_pipeline(audio_filename)
         except Exception as e:
