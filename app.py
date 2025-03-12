@@ -7,7 +7,7 @@ from flask import Flask, render_template, request, send_file, url_for, redirect
 import whisper
 
 app = Flask(__name__)
-app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 500  # up to 500 MB uploads
+app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1000  # up to 1G uploads
 
 # Load the Whisper model (using medium.en in this example; change as needed)
 model = whisper.load_model("medium.en")
