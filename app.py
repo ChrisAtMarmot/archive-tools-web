@@ -73,7 +73,7 @@ def index():
             from pyannote.audio import Pipeline
             diarization_pipeline = Pipeline.from_pretrained(
                 "pyannote/speaker-diarization",
-                use_auth_token="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"  # Replace with your Hugging Face token.
+                use_auth_token=""  # Replace with your Hugging Face token.
             )
             diarization = diarization_pipeline(audio_filename)
         except Exception as e:
