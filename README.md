@@ -104,3 +104,4 @@ This project is licensed under the MIT License.
 - [OpenAI Whisper](https://github.com/openai/whisper)
 - [pyannote.audio](https://github.com/pyannote/pyannote-audio)
 - [UIKit](https://getuikit.com/)
+- [Marmot Library Network](https://marmot.org)
